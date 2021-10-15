@@ -1,0 +1,220 @@
+:root {
+    --white: #fff;
+    --orange: #fe5d0d;
+    --green: #06a02a;
+    --brown: #251605;
+}
+
+@font-face {
+    font-family: DN Pro DN Pro Bold;
+    font-weight: bold;
+    src: url("../fonts/DN_Pro_DN_Pro_Bold.otf");
+}
+
+@font-face {
+    font-family: DN Pro DN Pro Medium;
+    font-weight: bold;
+    src: url("../fonts/DN_Pro_DN_Pro_Medium.otf");
+}
+
+@font-face {
+    font-family: DN Pro DN Pro SemiBold;
+    src: url("../fonts/DN_Pro_DN_Pro_Semi_Bold.otf");
+}
+
+@font-face {
+    font-family: NotoSans Regular;
+    src: url("../fonts/NotoSans-Regular.ttf");
+}
+
+#font-med {
+    font-family: DN Pro DN Pro Medium;
+}
+
+#font-bold {
+    font-family: DN Pro DN Pro Bold;
+}
+
+#font-med-nav {
+    font-family: DN Pro DN Pro Medium;
+}
+
+.font-bold-slider {
+    font-family: DN Pro DN Pro Bold;
+    color: var(--white);
+}
+
+.font-med-slider {
+    font-family: DN Pro DN Pro Medium;
+    color: var(--white);
+}
+
+#font-med-search {
+    font-family: DN Pro DN Pro Bold;
+    font-size: 16px;
+    margin-top: 5px;
+    padding: 0;
+    color: var(--white);
+}
+
+.navbar-toggler-icon{
+    font-size: 0.6em;
+}
+
+#navbar-menu {
+    background: linear-gradient(
+        43deg,
+        rgba(37, 22, 98, 1) 0%,
+        rgba(73, 44, 195, 1) 100%
+    );
+    background-color: #85144b;
+    margin-bottom: 25px;
+}
+
+#button-aanmelden {
+    background-color: var(--white);
+    color: #251605;
+    box-shadow: none;
+    font-family: DN Pro DN Pro Medium;
+}
+
+#button-aanmelden:hover {
+    background-color: #06a02a;
+    color: var(--white);
+}
+
+#button-search {
+    background-color: var(--orange);
+    color: var(--white);
+    box-shadow: none;
+    font-family: DN Pro DN Pro Medium;
+}
+
+#button-login {
+    background-color: var(--orange);
+    color: var(--white);
+    box-shadow: none;
+    font-family: DN Pro DN Pro Medium;
+}
+
+#button-login:hover {
+    background-color: #06a02a;
+}
+
+#navbar-menu-icon {
+    color: var(--white) !important;
+    fill: var(--white) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#container-header {
+    background: rgb(12, 6, 160);
+    background: linear-gradient(
+        90deg,
+        rgba(12, 6, 160, 1) 0%,
+        rgba(254, 93, 13, 1) 100%
+    );
+    /* height: 400px; */
+    margin-bottom: 25px;
+}
+
+#container-search {
+    background: rgb(128, 6, 45);
+    background: linear-gradient(
+        90deg,
+        rgba(128, 6, 45, 1) 0%,
+        rgba(65, 21, 192, 1) 100%
+    );
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+#container-topic {
+    background: rgb(128, 6, 45);
+    background: linear-gradient(
+        90deg,
+        rgba(128, 6, 45, 1) 0%,
+        rgba(65, 21, 192, 1) 100%
+    );
+    margin-bottom: 25px;
+}
+
+.underline-thick {
+    /* text-underline-offset: 10px; */
+    text-decoration: solid underline var(--orange) 3px;
+}
+
+#posts {
+    padding-left: 35px;
+}
+
+.TitlePost {
+    font-family: DN Pro DN Pro SemiBold;
+    color: var(--white);
+    text-transform: uppercase;
+
+}
+
+.icon-white {
+    color: white;
+}
+
+.post-style {
+    background: linear-gradient(
+        43deg,
+        rgba(37, 22, 98, 1) 0%,
+        rgba(73, 44, 195, 1) 100%
+    );
+    background-color: #85144b;
+    margin-bottom: 25px;
+}
+
+#post-button {
+    text-transform: uppercase;
+    background-color: var(--white);
+    color: #251605;
+    box-shadow: none;
+    font-family: DN Pro DN Pro Medium;
+}
+
+#post-button:hover {
+    background-color: #06a02a;
+    color: var(--white);
+}   
+
+.DecsPost {
+    font-family: NotoSans Regular;
+    color: var(--white);
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    #posts {
+        padding-left: 10px;
+    }
+}
+
+.topic {
+    font-family: DN Pro DN Pro SemiBold !important;
+    color: #FFFFFF !important;
+    text-decoration: underline 2px #fe5d0d !important;
+}
+
+.topic:hover {
+    text-decoration: underline 2px #FFFFFF!important;
+}
+
+
+table, tr, td {
+    border: none !important;
+}
+
+.footer-bottom {
+    height: 50px;
+    background: rgb(128,6,45);
+    background: linear-gradient(90deg, rgba(128,6,45,1) 0%, rgba(254,78,2,1) 100%); 
+}
+
+
+    
+
