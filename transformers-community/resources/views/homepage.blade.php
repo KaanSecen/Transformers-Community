@@ -50,7 +50,7 @@
                     <div class="rounded" id="container-search">
                         <p class="text-start font-med-slider mt-2 text-uppercase">Zoeken</p>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Zoeken..." aria-label="Search">
+                            <input type="text" name="search-term" class="form-control me-2" type="search" placeholder="Zoeken..." aria-label="Search">
                             <button class="btn rounded" type="submit" id="button-search">Search</button>
                         </form>
                     </div>
@@ -123,3 +123,36 @@
                     </div>
                 </div>
 @endsection
+@section('content')
+    @foreach ($posts as $post)
+        <div class="row">
+            <div class="rounded p-2 post-style">
+                <div class="row p-1">
+                    <div class="col-md-5">
+                        <img src="https://static.wixstatic.com/media/e72157_db107074d02f49ee85c5460d7358244e~mv2.png/v1/fill/w_796,h_450,al_c,q_85,usm_0.66_1.00_0.01/e72157_db107074d02f49ee85c5460d7358244e~mv2.webp" class="rounded" alt="">
+                    </div>
+
+                    <div class="col-md-7">
+                        <h1 class="TitlePost">{!! $post->title !!}<h1>
+
+                            <p style="font-size: 12px;">
+                                <span class="icon-white"><i class="far fa-user fa-xs"></i></span>
+                                <a href="/authors/{{ $post->author->username }}"><span class="DecsPost">{{ $post->author->name }}</span></a>
+                                <span class="icon-white"><i class="far fa-calendar fa-xs"></i></span>
+                                <span class="DecsPost">November 23, 2019</span>
+                                <span class="icon-white"><i class="fas fa-user-tag fa-xs"></i></span>
+                                <a href="/categories/{{ $post->category->slug }}"><span class="DecsPost">{{ $post->category->name }}</span></a>
+                            </p>
+                            <p style="font-size: 14px;"><span class="DecsPost">{{ $post->excerpt }}</span></p>
+
+                            <div class="d-flex justify-content-end">
+                                <a href="/posts/{{ $post->slug }}"><button class="btn rounded" type="button" id="post-button">lees meer</button></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+@endsection
+    
+

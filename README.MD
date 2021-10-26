@@ -39,7 +39,7 @@
   <h3 align="center">Transformers Community</h3>
 
   <p align="center">
-    project_description
+    Develop a CMS for transformers community where the user gets access to a protected part of the website after registration.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />

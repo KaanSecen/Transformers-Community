@@ -1,5 +1,11 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Post;
+use App\Models\User;
+
+
+
 use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,10 +21,46 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('homepage');
+
+
+    return view('homepage', [
+        'posts' => Post::latest()->get()
+    ]);
 });
 
-Route::get('/topic/{topic}', [TopicController::class, 'showTopic']);
+Route::get('posts/{post}', function (Post $post) {
+
+    // Find a post by its slug and pass it to a view called "post"
+
+    return view('post', [
+        'post' => $post
+    ]);
+
+
+});
+
+
+Route::get('categories/{category:slug}', function (Category $category) {
+
+    // Find a post by its slug and pass it to a view called "post"
+
+    return view('homepage', [
+        'posts' => $category->posts
+    ]);
+
+
+});
+
+Route::get('authors/{author:username}', function (User $author) {
+
+    // Find a post by its slug and pass it to a view called "post"
+
+    return view('homepage', [
+        'posts' => $author->posts
+    ]);
+
+
+});
 
 
 
