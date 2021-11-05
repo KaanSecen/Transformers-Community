@@ -7,6 +7,8 @@ use App\Models\User;
 
 
 use App\Http\Controllers\TopicController;
+use App\Models\Form;
+use App\Models\PrivateForm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,18 +22,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
 
 
     return view('homepage', [
-        'posts' => Post::latest()->get()
+        'posts' => Post::latest()->get(),
+        'users' => User::all(),
+        'categories' => Category::all()
     ]);
+});
+
+Route::post('/', function () {
+    Form::create([
+        'name' => request('email'),
+        'email' => request('email'),
+        'question' => request('question')
+    ]);
+    return redirect('/');
 });
 
 Route::get('posts/{post}', function (Post $post) {
 
     // Find a post by its slug and pass it to a view called "post"
-
     return view('post', [
         'post' => $post
     ]);
@@ -45,7 +58,9 @@ Route::get('categories/{category:slug}', function (Category $category) {
     // Find a post by its slug and pass it to a view called "post"
 
     return view('homepage', [
-        'posts' => $category->posts
+        'posts' => $category->posts,
+        'users' => User::all(),
+        'categories' => Category::all()
     ]);
 
 
@@ -56,11 +71,14 @@ Route::get('authors/{author:username}', function (User $author) {
     // Find a post by its slug and pass it to a view called "post"
 
     return view('homepage', [
-        'posts' => $author->posts
+        'posts' => $author->posts,
+        'users' => User::all(),
+        'categories' => Category::all()
     ]);
 
 
 });
+
 
 
 

@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto me-auto" id="font-med-nav">
                     <li class="nav-item">
-                        <a class="nav-link @yield('home')" aria-current="page" href="#">Home</a>
+                        <a class="nav-link @yield('home')" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('over-ons')" href="#">Over ons</a>
@@ -35,7 +35,7 @@
                         <a class="nav-link @yield('wordt-transformer')" href="#">Word Transformer!</a>
                     </li>
                     <li class="nav-item d-flex">
-                        <a class="nav-link @yield('contact')">Contact</a>
+                        <a class="nav-link @yield('contact')" href="#">Contact</a>
                     </li>
                 </ul>
                 @if (Route::has('login'))
