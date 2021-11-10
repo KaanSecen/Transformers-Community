@@ -42,11 +42,15 @@ class RegisteredUserController extends Controller
 
         // Alle usernames hebben van de database met de name die ik binnen krijg.
         $username = $faker->userName;
+        $access = '0';
+        $admin = '0';
         $usernamecount = User::where('username' , $username)->count();
         $username = $username . ($usernamecount+1);
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'access' => $access,
+            'admin' => $admin,
             'username' => $username,
             'password' => Hash::make($request->password),
         ]);
